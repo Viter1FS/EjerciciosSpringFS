@@ -1,16 +1,23 @@
-package com.Vitech.springFS.beans;
+package com.Vitech.springFS.domain;
 
-public class Person {
+import jakarta.annotation.Nonnull;
+import jakarta.validation.constraints.NotBlank;
 
+public class PersonRequest {
+
+    @NotBlank(message = "DNI cant not be null")
     private String DNI;
+    @NotBlank(message = "name cant not be null")
     private String name;
+    @NotBlank(message = "first surname cant not be null")
     private String first_surname;
+    @NotBlank(message = "second surname cant not be null")
     private String second_surname;
     private String full_name;
     private String birthdate;
     private String gender_sex;
 
-    public Person(String DNI, String name, String first_surname, String second_surname, String birthdate, String gender_sex) {
+    public PersonRequest(String DNI, String name, String first_surname, String second_surname, String birthdate, String gender_sex) {
         this.DNI = DNI;
         this.name = name;
         this.first_surname = first_surname;
