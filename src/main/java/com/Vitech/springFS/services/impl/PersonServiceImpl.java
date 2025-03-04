@@ -9,36 +9,42 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+// La clase PersonServiceImpl está marcada con la anotación @Service para indicar que es un servicio de Spring
 @Service
 public class PersonServiceImpl implements PersonService {
 
+    // Método para obtener la lista completa de personas
     public List<PersonResponse> completePersonList(){
         return persons;
 
     }
 
+    // Método para buscar una persona por su DNI
     public PersonResponse findByDNI(String DNI ){
         //List<String> chosen_person_x =  persons_list.stream().map(Person::getDNI).collect(Collectors.toList());
-
         try {
+            // Utiliza el stream para buscar una persona cuyo DNI coincida con el proporcionado
             PersonResponse chosen_person = persons.stream()
-                    .filter(PersonResponse -> DNI.equals(PersonResponse.getDNI()))
-                    .findAny()
-                    .orElse(null);
+                    .filter(person -> DNI.equals(person.getDNI())) // Filtra por el DNI
+                    .findAny()  // Busca cualquier persona que cumpla la condición
+                    .orElse(null); // Devuelve null si no encuentra ninguna persona
             return chosen_person;
         }catch (Exception e){
+            // Si ocurre algún error, imprime la excepción y devuelve null
             e.printStackTrace();
             return null;
-
         }
 
 
     }
 
+    // Método para actualizar los datos de una persona utilizando su DNI
     public PersonResponse updateByDNI(String DNI , PersonResponse person){
         //List<String> chosen_person_x =  persons_list.stream().map(Person::getDNI).collect(Collectors.toList());
+        // Primero, busca la persona que tiene el DNI proporcionado
         PersonResponse personToUpdate = findByDNI(DNI);
 
+        // Si la persona existe, se actualizan sus datos con la información proporcionada
         personToUpdate.setDNI(person.getDNI());
         personToUpdate.setName(person.getName());
         personToUpdate.setFirst_surname(person.getFirst_surname());
@@ -51,6 +57,7 @@ public class PersonServiceImpl implements PersonService {
     }
 
 
+    // Lista de personas predefinida para simular una base de datos
     private List<PersonResponse> persons = new ArrayList<>(Arrays.asList(
             new PersonResponse(
                     "50371409Y",

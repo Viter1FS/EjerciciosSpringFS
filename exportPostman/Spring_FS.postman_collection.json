@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "f1849b26-6696-4434-b821-74ced59d1cc7",
+		"name": "Spring_FS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9771374"
+	},
+	"item": [
+		{
+			"name": "getAllPersons",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getPersonByDNI",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "postAddPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/addPerson?name=Gustavo&first_surname=Gaviria&second_surname=Escobar&birthdate=19/05/1964&gender_sex=Hombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addPerson"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Gustavo"
+						},
+						{
+							"key": "first_surname",
+							"value": "Gaviria"
+						},
+						{
+							"key": "second_surname",
+							"value": "Escobar"
+						},
+						{
+							"key": "birthdate",
+							"value": "19/05/1964"
+						},
+						{
+							"key": "gender_sex",
+							"value": "Hombre"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postAddPerson Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/addPerson?name=Gustavo&first_surname=Gaviria&second_surname=Escobar&birthdate=19/05/1964&gender_sex=Hombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addPerson"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Gustavo"
+						},
+						{
+							"key": "first_surname",
+							"value": "Gaviria"
+						},
+						{
+							"key": "second_surname",
+							"value": "Escobar"
+						},
+						{
+							"key": "birthdate",
+							"value": "19/05/1964"
+						},
+						{
+							"key": "gender_sex",
+							"value": "Hombre"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePerson",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Paco Peco\",\r\n    \"first_surname\": \"Escobar\",\r\n    \"second_surname\": \"Gaviria\",\r\n    \"birthdate\": \"27/06/1986\",\r\n    \"gender_sex\": \"Mujer\",\r\n    \"full_name\": \"Paco Peco Escobar Gaviria\",\r\n    \"dni\": \"X512366Y\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/persons/X512366Y",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons",
+						"X512366Y"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
