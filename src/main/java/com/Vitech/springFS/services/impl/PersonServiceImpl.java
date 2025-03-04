@@ -79,7 +79,56 @@ public class PersonServiceImpl implements PersonService {
                     "Escobar" ,
                     "Gaviria" ,
                     "27/06/1986" ,
-                    "Hombre")
+                    "Hombre"),
+            new PersonResponse(
+                    "X512361Y",
+                    "Paco Peco" ,
+                    "Ramirez" ,
+                    "Ziro" ,
+                    "27/06/1986" ,
+                    "Hombre"),
+            new PersonResponse(
+                    "X522366Y",
+                    "Peco" ,
+                    "Lopez" ,
+                    "Zanetti" ,
+                    "27/06/1986" ,
+                    "Hombre"),
+            new PersonResponse(
+                    "X532366Y",
+                    "Pablo" ,
+                    "Ramirez" ,
+                    "Pochetino" ,
+                    "27/06/1986" ,
+                    "Hombre"),
+            new PersonResponse(
+                    "X542366Y",
+                    "Luis" ,
+                    "Lopez" ,
+                    "Chingasu" ,
+                    "27/06/1946" ,
+                    "Hombre"),
+            new PersonResponse(
+                    "X552366Y",
+                    "Alma" ,
+                    "Marcela" ,
+                    "Gozo" ,
+                    "27/06/1986" ,
+                    "Mujer"),
+            new PersonResponse(
+                    "X562366Y",
+                    "Elena" ,
+                    "Nito" ,
+                    "Del bosque" ,
+                    "27/06/1986" ,
+                    "Mujer"),
+            new PersonResponse(
+                    "X572366Y",
+                    "Luz" ,
+                    "Cuesta" ,
+                    "Mazo" ,
+                    "27/06/1986" ,
+                    "Mujer")
 
     ));
 
